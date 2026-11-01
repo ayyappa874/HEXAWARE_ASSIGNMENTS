@@ -1,0 +1,20 @@
+--- example 1
+In-order : ['AMD', 'BLR', 'BOM', 'CCU', 'DEL', 'HYD', 'JAI', 'MAA', 'NAG', 'PNQ']
+Height   : 5
+MAA      : (True, 4)
+XYZ      : (False, 2)
+Sorted-input height: 10
+--- example 2
+TRK1003 : {'trackingNo': 'TRK1003', 'hubCode': 'BOM', 'scannedAt': '2026-10-30 08:20'}
+Double scans:
+   ('TRK1004', 'HYD', '2026-10-30 08:31', 2)
+   ('TRK1006', 'MAA', '2026-10-30 08:50', 2)
+--- example 3
+(['PNQ', 'BOM', 'NAG', 'CCU'], 3)
+['NAG', 'DEL', 'CCU', 'MAA', 'BLR', 'BOM', 'PNQ', 'HYD']
+--- example 4
+Best window: hours 16-19, average 81.75
+--- example 5
+DEL-LED -> True
+Ab-C, c-BA -> True
+NAG-DEL-BOM -> False

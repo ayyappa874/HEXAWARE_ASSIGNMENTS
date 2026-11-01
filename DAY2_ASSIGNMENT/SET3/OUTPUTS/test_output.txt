@@ -1,0 +1,15 @@
+test_bst (test_set3.T1.test_bst) ... ok
+test_sorted_input_is_chain (test_set3.T1.test_sorted_input_is_chain) ... ok
+test_double_scans (test_set3.T2.test_double_scans) ... ok
+test_hashmap_resize (test_set3.T2.test_hashmap_resize) ... ok
+test_same_parcel_different_time_not_double (test_set3.T2.test_same_parcel_different_time_not_double) ... ok
+test_bfs (test_set3.T3.test_bfs) ... ok
+test_dfs (test_set3.T3.test_dfs) ... ok
+test_short_input (test_set3.T4.test_short_input) ... ok
+test_window (test_set3.T4.test_window) ... ok
+test_pal (test_set3.T5.test_pal) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.005s
+
+OK

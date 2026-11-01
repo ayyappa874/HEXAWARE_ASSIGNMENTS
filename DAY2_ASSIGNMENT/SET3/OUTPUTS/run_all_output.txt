@@ -1,0 +1,47 @@
+=== TASK 1: BST OF HUB CODES ===
+Insert order   : ['NAG', 'DEL', 'BOM', 'PNQ', 'HYD', 'BLR', 'MAA', 'CCU', 'AMD', 'JAI']
+In-order       : ['AMD', 'BLR', 'BOM', 'CCU', 'DEL', 'HYD', 'JAI', 'MAA', 'NAG', 'PNQ']
+Height (nodes) : 5
+Search MAA     : (True, 4)
+Search XYZ     : (False, 2)
+Same codes, sorted input -> height: 10
+1,000 codes: sorted input height 1000, shuffled input height 25
+Search last code, sorted-input tree: 1000 comparisons
+
+=== TASK 2: HASH MAP LOOKUP + DOUBLE SCANS ===
+Lookup TRK1003 : {'trackingNo': 'TRK1003', 'hubCode': 'BOM', 'scannedAt': '2026-10-30 08:20'}
+Lookup TRK9999 : None
+Double scans   : [('TRK1004', 'HYD', '2026-10-30 08:31', 2), ('TRK1006', 'MAA', '2026-10-30 08:50', 2)]
+50,000 parcels, 1,000 lookups: hash map 0.71 ms, linear scan (est. from 100) 1090.3 ms
+
+=== TASK 3: GRAPH, BFS AND DFS ===
+NAG -> ['DEL', 'BOM', 'HYD', 'CCU']
+DEL -> ['NAG', 'CCU']
+BOM -> ['NAG', 'PNQ', 'BLR']
+PNQ -> ['BOM', 'HYD']
+HYD -> ['NAG', 'PNQ', 'BLR']
+BLR -> ['BOM', 'HYD', 'MAA']
+MAA -> ['BLR', 'CCU']
+CCU -> ['NAG', 'DEL', 'MAA']
+AMD -> ['JAI']
+JAI -> ['AMD']
+BFS MAA to DEL: path=['MAA', 'CCU', 'DEL'] hops=2
+BFS PNQ to CCU: path=['PNQ', 'BOM', 'NAG', 'CCU'] hops=3
+BFS NAG to JAI: path=None hops=-1
+DFS from NAG   : ['NAG', 'DEL', 'CCU', 'MAA', 'BLR', 'BOM', 'PNQ', 'HYD'] count = 8
+Not reachable  : ['AMD', 'JAI']
+
+=== TASK 4: SLIDING WINDOW ===
+Hourly counts  : [12, 18, 25, 31, 44, 52, 60, 71, 66, 58, 49, 40, 35, 38, 47, 63, 80, 92, 85, 70, 55, 40, 28, 19]
+Best 4-hour window: hours 16 to 19, counts [80, 92, 85, 70], average 81.75
+Brute force agrees: True
+200,000 hours, k=4: sliding 20.3 ms, brute force 37.8 ms
+50,000 hours, k=1000: sliding 5.6 ms, brute force 328.6 ms
+
+=== TASK 5: PALINDROME ROUTE CODES ===
+'DEL-LED'        -> True
+'Ab-C, c-BA'     -> True
+'NAG-DEL-BOM'    -> False
+'MAA / aam'      -> True
+''               -> True
+'-,-'            -> True
