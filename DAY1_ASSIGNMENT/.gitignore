@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+# auto-generated large datasets (recreated by the scripts)
+data/orders_50000.csv
+data/orders_10000.csv
