@@ -1,0 +1,23 @@
+test_duplicate_ignored (test_set2.T1.test_duplicate_ignored) ... ok
+test_empty (test_set2.T1.test_empty) ... ok
+test_traversals (test_set2.T1.test_traversals) ... ok
+test_collision_handled (test_set2.T2.test_collision_handled) ... ok
+test_different_date_not_duplicate (test_set2.T2.test_different_date_not_duplicate) ... ok
+test_empty (test_set2.T2.test_empty) ... ok
+test_groups (test_set2.T2.test_groups) ... ok
+test_normalise (test_set2.T2.test_normalise) ... ok
+test_pairwise_agrees (test_set2.T2.test_pairwise_agrees) ... ok
+test_cycle (test_set2.T3.test_cycle) ... ok
+test_no_cycle_and_empty (test_set2.T3.test_no_cycle_and_empty) ... ok
+test_path (test_set2.T3.test_path) ... ok
+test_self_loop (test_set2.T3.test_self_loop) ... ok
+test_edges (test_set2.T4.test_edges) ... ok
+test_run (test_set2.T4.test_run) ... ok
+test_duplicates_kept_or_dropped (test_set2.T5.test_duplicates_kept_or_dropped) ... ok
+test_empty (test_set2.T5.test_empty) ... ok
+test_merge (test_set2.T5.test_merge) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.002s
+
+OK

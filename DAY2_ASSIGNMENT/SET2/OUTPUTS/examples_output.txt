@@ -1,0 +1,15 @@
+--- example 1
+Inorder  : ['CL1010', 'CL1020', 'CL1030', 'CL1050', 'CL1080']
+Preorder : ['CL1050', 'CL1020', 'CL1010', 'CL1030', 'CL1080']
+Postorder: ['CL1010', 'CL1030', 'CL1020', 'CL1080', 'CL1050']
+CL1030   : (True, 3)
+--- example 2
+('POL-1001', '2026-10-12') -> ['CL1010', 'CL1050', 'CL1100']
+('POL1004', '2026-10-14') -> ['CL1030', 'CL1060']
+--- example 3
+(['REGISTRATION', 'ASSESSMENT', 'SETTLEMENT'], 2)
+['ASSESSMENT', 'SURVEYOR', 'ASSESSMENT']
+--- example 4
+Longest run: start day 6, 4 days
+--- example 5
+['CL1005', 'CL1010', 'CL1020', 'CL1020', 'CL1030', 'CL1040', 'CL1060', 'CL1070', 'CL1090', 'CL1100']

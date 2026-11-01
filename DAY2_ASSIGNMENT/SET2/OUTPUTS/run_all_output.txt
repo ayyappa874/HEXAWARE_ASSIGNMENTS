@@ -1,0 +1,44 @@
+=== TASK 1: BST OF CLAIM IDS ===
+Insert order : ['CL1050', 'CL1020', 'CL1080', 'CL1010', 'CL1030', 'CL1060', 'CL1090', 'CL1040', 'CL1070', 'CL1100', 'CL1005', 'CL1065']
+Inorder      : ['CL1005', 'CL1010', 'CL1020', 'CL1030', 'CL1040', 'CL1050', 'CL1060', 'CL1065', 'CL1070', 'CL1080', 'CL1090', 'CL1100']
+Preorder     : ['CL1050', 'CL1020', 'CL1010', 'CL1005', 'CL1030', 'CL1040', 'CL1080', 'CL1060', 'CL1070', 'CL1065', 'CL1090', 'CL1100']
+Postorder    : ['CL1005', 'CL1010', 'CL1040', 'CL1030', 'CL1020', 'CL1065', 'CL1070', 'CL1060', 'CL1100', 'CL1090', 'CL1080', 'CL1050']
+Inorder sorted: True
+Search CL1065  : (True, 5)
+Search CL9999  : (False, 4)
+Insert CL1050 again -> False (False = duplicate ignored)
+
+=== TASK 2: HASHING FOR DUPLICATE CLAIMS ===
+Duplicate group ('POL-1001', '2026-10-12') -> ['CL1010', 'CL1050', 'CL1100']
+Duplicate group ('POL1004', '2026-10-14') -> ['CL1030', 'CL1060']
+Pairwise check agrees: True
+Table after 12 claims: 9 keys, 16 buckets, 1 collisions, longest chain 2
+Forced collision (all keys in 1 bucket): chain 9, same result: True
+5,000 claims: hashing 37.3 ms, pairwise 2604 ms, same answer: True
+
+=== TASK 3: APPROVAL STAGES AS DIRECTED GRAPH ===
+REGISTRATION -> ['ASSESSMENT']
+ASSESSMENT -> ['SURVEYOR', 'SETTLEMENT']
+SURVEYOR -> ['ASSESSMENT', 'SETTLEMENT']
+SETTLEMENT -> []
+BFS REGISTRATION to SETTLEMENT: (['REGISTRATION', 'ASSESSMENT', 'SETTLEMENT'], 2)
+BFS SURVEYOR to SETTLEMENT: (['SURVEYOR', 'SETTLEMENT'], 1)
+BFS SETTLEMENT to REGISTRATION: (None, -1)
+Loop found   : ['ASSESSMENT', 'SURVEYOR', 'ASSESSMENT']
+Loop found (no rework edge): None
+
+=== TASK 4: LONGEST RUN ABOVE 100 CLAIMS ===
+Daily claims : [80, 95, 120, 135, 110, 90, 105, 150, 160, 140, 99, 101, 102, 70]
+Longest run  : days 6 to 9 (4 days), counts [105, 150, 160, 140]
+Brute force agrees: True
+1,000,000 days: sliding window 64 ms, run length 20
+3,000 days all above 100 (worst case): sliding 0.54 ms, brute force 227 ms
+
+=== TASK 5: MERGE TWO SORTED LISTS ===
+North        : ['CL1005', 'CL1020', 'CL1040', 'CL1060', 'CL1090']
+South        : ['CL1010', 'CL1020', 'CL1030', 'CL1070', 'CL1100']
+Merged       : ['CL1005', 'CL1010', 'CL1020', 'CL1020', 'CL1030', 'CL1040', 'CL1060', 'CL1070', 'CL1090', 'CL1100']
+Merged unique: ['CL1005', 'CL1010', 'CL1020', 'CL1030', 'CL1040', 'CL1060', 'CL1070', 'CL1090', 'CL1100']
+Empty + list : ['CL1010', 'CL1020', 'CL1030', 'CL1070', 'CL1100']
+Both empty   : []
+200,000 + 200,000 IDs: two-pointer merge 68 ms, concat + sorted() 18 ms, same result: True
