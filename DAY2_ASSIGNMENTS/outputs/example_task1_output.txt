@@ -1,5 +1,0 @@
-Inorder  : ['Books', 'Clothing', 'Grocery', 'Sports']
-Preorder : ['Grocery', 'Clothing', 'Books', 'Sports']
-Postorder: ['Books', 'Clothing', 'Sports', 'Grocery']
-Search 'Books': found=True after 3 comparisons
-Search 'Toys' : found=False after 2 comparisons
