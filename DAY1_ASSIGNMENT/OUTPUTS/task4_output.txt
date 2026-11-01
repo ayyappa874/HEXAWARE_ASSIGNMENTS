@@ -1,0 +1,31 @@
+A) UNDO LAST ORDER EDIT (custom Stack)
+  edit  order 1001: amount -> 1300
+  edit  order 1002: customerId -> C999
+  edit  order 1001: amount -> 1400
+  undo  order 1001: amount restored to 1300
+  undo  order 1002: customerId restored to C102
+  order 1001 amount now 1300 (expected 1300), order 1002 customer C102 (expected C102)
+
+B) DISPATCH LINE (custom Queue, first come first served)
+  enqueue order 1001
+  enqueue order 1002
+  enqueue order 1003
+  enqueue order 1004
+  enqueue order 1005
+  dispatch order 1001  (remaining 4)
+  dispatch order 1002  (remaining 3)
+  dispatch order 1003  (remaining 2)
+  dispatch order 1004  (remaining 1)
+  dispatch order 1005  (remaining 0)
+
+C) COMPARISON: custom vs built-in (200,000 operations each)
+  Custom Stack (linked list)              0.1132 s
+  Built-in list as stack                  0.0101 s
+  Custom Queue (linked list)              0.1167 s
+  Built-in collections.deque as queue     0.0123 s
+  list.pop(0) as queue (50,000 only)      3.2772 s
+
+Observations:
+  - Built-ins are faster (written in C); custom classes pay Python-call overhead.
+  - All four are O(1) per operation; only list.pop(0) is O(n) per op (shifts all items).
+  - Use list for stacks, deque for queues; never list.pop(0) for a real queue.

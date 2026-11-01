@@ -1,0 +1,20 @@
+
+20 sample records: 2 duplicate group(s), 5 orders flagged
+  customer C104  amount 2499  minute 2026-10-29 10:12  -> orders [1004, 1005]
+  customer C108  amount 899  minute 2026-10-29 11:30  -> orders [1009, 1010, 1011]
+
+50,000 generated records: 97 duplicate group(s), 194 orders flagged
+  customer C0172  amount 44447  minute 2026-10-29 01:15  -> orders [103000, 103001]
+  customer C0195  amount 30145  minute 2026-10-29 00:38  -> orders [101500, 101501]
+  customer C0196  amount 28712  minute 2026-10-29 19:59  -> orders [148000, 148001]
+  customer C0225  amount 31630  minute 2026-10-29 17:17  -> orders [141500, 141501]
+  customer C0246  amount 30209  minute 2026-10-29 07:18  -> orders [117500, 117501]
+  customer C0331  amount 12493  minute 2026-10-29 03:32  -> orders [108500, 108501]
+  ... and 91 more groups
+
+Complexity (sorting approach):
+  Time : O(n log n) for the sort + O(n) scan  => O(n log n)
+  Space: O(n) for the sorted copy (O(1) extra if sorted in place)
+
+Note: near-miss orders 1014/1015 (same customer & amount, but 12:05 vs 12:06)
+      are correctly NOT flagged - minute boundary is respected.

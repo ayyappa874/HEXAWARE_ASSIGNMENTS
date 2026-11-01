@@ -1,0 +1,13 @@
+Top 5 orders by amount:
+  #1  order 1007  amount 5600
+  #2  order 1012  amount 4300
+  #3  order 1002  amount 2499
+  #4  order 1004  amount 2499
+  #5  order 1005  amount 2499
+Bubble sort and merge sort give the same ranking: True
+
+First 3 bubble-sort passes on the first 10 amounts:
+  Start : [1250, 2499, 320, 2499, 2499, 780, 5600, 150, 899, 899]
+  After pass 1: [2499, 1250, 2499, 2499, 780, 5600, 320, 899, 899, 150]
+  After pass 2: [2499, 2499, 2499, 1250, 5600, 780, 899, 899, 320, 150]
+  After pass 3: [2499, 2499, 2499, 5600, 1250, 899, 899, 780, 320, 150]

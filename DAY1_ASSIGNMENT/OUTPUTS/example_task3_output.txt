@@ -1,0 +1,2 @@
+Duplicate group [1004, 1005]: customer C104, amount 2499
+Duplicate group [1009, 1010, 1011]: customer C108, amount 899

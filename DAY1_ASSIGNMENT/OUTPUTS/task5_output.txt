@@ -1,0 +1,18 @@
+A) GREEDY on Indian currency [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1]
+  refund order 1002 (Rs 2499): 9 pieces -> 1 x 2000 + 2 x 200 + 1 x 50 + 2 x 20 + 1 x 5 + 2 x 2
+  refund order 1007 (Rs 5600): 6 pieces -> 2 x 2000 + 3 x 500 + 1 x 100
+  refund order 1009 (Rs 899): 9 pieces -> 1 x 500 + 1 x 200 + 1 x 100 + 1 x 50 + 2 x 20 + 1 x 5 + 2 x 2
+  refund order 1012 (Rs 4300): 4 pieces -> 2 x 2000 + 1 x 200 + 1 x 100
+  Greedy matches the DP optimum for every amount 1..3000 on INR set: True
+
+B) WHERE GREEDY FAILS: denominations [1, 3, 4], refund = 6
+  Greedy : 3 coins -> 1 x 4 + 2 x 1
+  DP     : 2 coins -> 2 x 3   <-- optimal
+  Amounts 1..30 where greedy is suboptimal: [6, 10, 14, 18, 22, 26, 30]
+
+C) Another failing set: [1, 5, 6, 9], refund = 11
+  Greedy : 3 coins -> 1 x 9 + 2 x 1
+  DP     : 2 coins -> 1 x 6 + 1 x 5
+
+Why: greedy makes the locally best pick (largest coin) and never reconsiders.
+DP tries every coin for every sub-amount, so it always finds the true minimum.

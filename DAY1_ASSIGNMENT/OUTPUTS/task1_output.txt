@@ -1,0 +1,14 @@
+Loaded 50000 orders (sorted by orderId)
+
+Case                   Linear cmp Binary cmp   Linear time   Binary time
+Best  (first order)             1         15        0.6 us       1.82 us
+Middle order                25001         15     1653.5 us       2.03 us
+Worst (last order)          50000         16     3544.0 us       2.11 us
+Not found (id=0)            50000         15     3523.4 us       1.82 us
+
+1000 random lookups: linear = 1922.0 ms, binary = 4.86 ms, binary is ~396x faster
+
+Explanation:
+  Linear search is O(n): in the worst case it checks all 50,000 records.
+  Binary search is O(log n): it halves the range each step, max ~16 checks
+  (log2 50,000 = 15.6). Condition: data MUST already be sorted by orderId.

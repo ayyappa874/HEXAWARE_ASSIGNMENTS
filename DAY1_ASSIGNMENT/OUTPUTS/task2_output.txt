@@ -1,0 +1,18 @@
+TRACE (bubble sort, descending) on first 6 sample amounts
+  Start        : [1250, 2499, 320, 2499, 2499, 780]
+  After pass 1: [2499, 1250, 2499, 2499, 780, 320]
+  After pass 2: [2499, 2499, 2499, 1250, 780, 320]
+  After pass 3: [2499, 2499, 2499, 1250, 780, 320]
+
+BENCHMARK on 10000 records
+  Bubble sort  O(n^2)              7.8974 s
+  Merge sort  O(n log n)           0.0349 s
+  Built-in sorted() (Timsort)      0.0020 s
+  All three produce the same ranking: OK
+
+Top 5 orders by amount:
+  #1  order 109242  customer C1035  amount 49995
+  #2  order 108610  customer C2319  amount 49994
+  #3  order 101875  customer C1069  amount 49990
+  #4  order 100048  customer C4101  amount 49985
+  #5  order 109079  customer C1043  amount 49981

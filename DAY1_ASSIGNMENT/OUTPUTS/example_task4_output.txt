@@ -1,0 +1,4 @@
+Edited order 1001 amount to 1300
+Edited order 1001 amount to 1400
+Undo -> order 1001 amount is back to 1300
+Dispatch order: [1001, 1002, 1003]

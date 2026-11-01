@@ -1,0 +1,4 @@
+Linear search : found at position 13 after 14 comparisons
+Binary search : found at position 13 after 5 comparisons
+Order details : {'orderId': 1014, 'customerId': 'C111', 'amount': 1500, 'createdAt': '2026-10-29 12:05:55'}
+Order 9999    : position -1 (-1 means not found) after 5 comparisons
