@@ -1,0 +1,11 @@
+hubCode,hubName,connectedTo
+NAG,Nagpur Central Depot,DEL|BOM|HYD|CCU
+DEL,Delhi,NAG|CCU
+BOM,Mumbai,NAG|PNQ|BLR
+PNQ,Pune,BOM|HYD
+HYD,Hyderabad,NAG|PNQ|BLR
+BLR,Bengaluru,BOM|HYD|MAA
+MAA,Chennai,BLR|CCU
+CCU,Kolkata,NAG|DEL|MAA
+AMD,Ahmedabad,JAI
+JAI,Jaipur,AMD
