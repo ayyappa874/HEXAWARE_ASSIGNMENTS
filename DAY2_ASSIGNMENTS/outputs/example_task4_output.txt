@@ -1,0 +1,2 @@
+Requests: [4, 7, 2, 9, 5, 8, 1, 6]
+Busiest 3 in a row starts at position 3: [9, 5, 8] = 22

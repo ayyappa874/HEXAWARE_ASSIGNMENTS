@@ -1,0 +1,16 @@
+A) COLLISION DEMO - 10 SKUs into a table of only 7 buckets
+  bucket 0: SKU-1001 -> SKU-1008   <-- COLLISION
+  bucket 1: SKU-1002 -> SKU-1009   <-- COLLISION
+  bucket 2: SKU-1003 -> SKU-1010   <-- COLLISION
+  bucket 3: SKU-1004
+  bucket 4: SKU-1005
+  bucket 5: SKU-1006
+  bucket 6: SKU-1007
+  Buckets with a collision: 3; get('SKU-1004') -> Bluetooth Speaker
+
+B) 100,000 SKUs - look up every SKU once (all 100,000 found by both)
+  Own chained table : build 0.600 s, lookups 0.205 s  (2.05 us each)
+  Built-in dict     : build 0.021 s, lookups 0.033 s  (0.33 us each)
+  Plain list scan   : 1,321.2 us each  (measured on 200 lookups only)
+  Own table at the end: 147,455 buckets, load 0.68, longest chain 6
+  dict is about 6.3x faster than the own table

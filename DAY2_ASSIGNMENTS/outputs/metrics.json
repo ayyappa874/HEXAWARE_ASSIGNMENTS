@@ -1,0 +1,79 @@
+{
+ "t1": {
+  "height": 4,
+  "sorted_height": 15,
+  "sorted_search_steps": 15,
+  "inorder_is_sorted": true
+ },
+ "t2": {
+  "collisions_in_demo": 3,
+  "own_total": 0.20476212199999821,
+  "dict_total": 0.032677108000001454,
+  "own_us": 2.047621219999982,
+  "dict_us": 0.32677108000001454,
+  "scan_us": 1321.153165000002,
+  "own_build": 0.6001142930000007,
+  "dict_build": 0.02065809200000146,
+  "capacity": 147455,
+  "load": 0.6781730019327931,
+  "longest_chain": 6,
+  "ratio": 6.266225334261193
+ },
+ "t3": {
+  "services": 9,
+  "edges": 11,
+  "cycle": [
+   "cart",
+   "pricing",
+   "inventory",
+   "cart"
+  ],
+  "stuck": [
+   "api-gateway",
+   "cart",
+   "order",
+   "pricing",
+   "inventory",
+   "notification"
+  ]
+ },
+ "t4": {
+  "start": "18:33",
+  "end": "21:33",
+  "total": 242229,
+  "avg": 1345.7166666666667,
+  "day_total": 587980,
+  "share": 41.19680941528623,
+  "slide_us": 209.90184499998676,
+  "brute_us": 2064.4599000000594,
+  "ratio": 9.835358521980547,
+  "hour_start": 19,
+  "hour_total": 231969
+ },
+ "t5": {
+  "pairs": [
+   [
+    150,
+    850
+   ],
+   [
+    250,
+    750
+   ],
+   [
+    400,
+    600
+   ],
+   [
+    500,
+    500
+   ]
+  ],
+  "fast_ms": 0.376433999999648,
+  "slow_ms": 647.8126680000003,
+  "ratio": 1720.9196512552162,
+  "n_pairs_5000": 127,
+  "huge_ms": 10.585259999999153,
+  "huge_pairs": 4088
+ }
+}

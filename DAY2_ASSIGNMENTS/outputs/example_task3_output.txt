@@ -1,0 +1,3 @@
+DFS order: ['inventory', 'pricing', 'cart']
+BFS order: ['inventory', 'pricing', 'cart']
+With a circle -> order: None | cycle found: ['cart', 'pricing', 'inventory', 'cart']
