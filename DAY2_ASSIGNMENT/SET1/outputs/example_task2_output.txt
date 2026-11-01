@@ -1,0 +1,6 @@
+bucket 0: ['SKU-3']
+bucket 1: ['SKU-1', 'SKU-4']
+bucket 2: ['SKU-2']
+get('SKU-3') -> Stand
+get('SKU-9') -> None
+after remove, get('SKU-3') -> None

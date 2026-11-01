@@ -1,0 +1,12 @@
+Loaded 1440 per-minute values (24 hours). Window = 180 minutes (3 hours).
+
+A) Per-minute data, sliding window
+  Busiest 3 hours: 18:33 to 21:33
+  Requests in the window: 242,229  (average 1,346 per minute)
+  Whole day: 587,980 requests; the window holds 41.2% of them
+  Brute-force check gives the same answer: True
+  Time: sliding window 210 us, brute force 2,064 us (about 10x slower)
+
+B) If only hourly totals were given (24 values, window of 3 hours)
+  Busiest 3 hours: 19:00 to 22:00, 231,969 requests
+  (hourly data can only start on the hour, so its best window can only be equal or lower)
