@@ -1,0 +1,65 @@
+# Retail Order Desk - Problem Solving Techniques & Data Structures I
+
+Hexaware training | Day 1 | Python 3.9+ (standard library only)
+
+An online retailer handles about 50,000 orders a day. Support agents must **find an order instantly**, the warehouse needs orders **ranked for dispatch**, and finance must **flag duplicate submissions**. This project solves that with searching, sorting, stacks/queues, greedy and dynamic programming, then measures and tests each solution.
+
+The full written record is in **[docs/Retail_Order_Desk_Practical_Record.docx](docs/Retail_Order_Desk_Practical_Record.docx)**: for each task it has the pseudocode, Python code, an example with real output, a dry run, complexity and key takeaways.
+
+## Project structure
+```
+retail-desk-day1/
+├── README.md
+├── data/orders_20.csv           # 20 hand-made sample records (columns: orderId, customerId, amount, createdAt)
+├── src/
+│   ├── common.py                # CSV loader, data generator, merge sort
+│   ├── task1_search.py          # Linear vs binary search (50,000 records)
+│   ├── task2_sorting.py         # Bubble O(n^2) vs merge O(n log n) vs built-in (10,000 records)
+│   ├── task3_duplicates.py      # Duplicate detection by SORTING (no hashing)
+│   ├── task4_stack_queue.py     # Own Stack/Queue vs list/deque
+│   ├── task5_refund.py          # Greedy vs dynamic programming
+│   ├── example_task1..5.py      # short examples, one per task
+│   └── run_all.py               # runs all tasks and saves the output
+├── tests/test_all.py            # 7 unit tests
+├── outputs/                     # saved console output (tasks and examples)
+└── docs/
+    ├── Retail_Order_Desk_Practical_Record.docx   # the written record
+    ├── pseudocode.md            # pseudocode, FUNCTION ... END FUNCTION style
+    ├── dry_runs.md              # hand-traced dry runs
+    ├── one_page_note.md         # complexity and data-structure rationale
+    └── takeaways.md             # key takeaways
+```
+
+## How to run
+```bash
+cd retail-desk-day1/src
+python run_all.py                 # runs all 5 tasks, writes ../outputs/*.txt
+python example_task1.py           # a small example per task (1 to 5)
+
+cd ..
+python -m unittest discover -s tests -v
+```
+Task 2 takes about 8 seconds because bubble sort is deliberately slow on 10,000 records. The 10,000 and 50,000-record files are generated automatically on first run.
+
+## Results from one run
+Timings depend on the computer; the comparison counts and the fastest-to-slowest order do not.
+
+| Task | What was built | Result |
+|---|---|---|
+| 1 | Linear + binary search | Worst case 50,000 vs 16 comparisons; binary ~396x faster over 1,000 lookups (but linear won for the very first order) |
+| 2 | Bubble + merge sort | 10,000 records: bubble 7.90 s, merge 0.035 s, built-in 0.002 s |
+| 3 | Duplicates by sorting (no hashing) | Sample: 2 groups (5 orders). 50,000: 97 of 99 planted groups found; 2 missed because they straddle a minute change |
+| 4 | Own Stack + Queue | Built-ins ~10x faster; `list.pop(0)` queue took 3.28 s for 50,000 items |
+| 5 | Greedy + DP | Greedy matched DP for amounts 1..3000 on Indian notes (tested, not proved); coins {1,3,4}, refund 6: greedy 3, DP 2 |
+
+## Key takeaways
+1. The choice of algorithm made the biggest difference (396x and 226x on the same data).
+2. Faster in theory is not faster every time: linear search beat binary search for the first order.
+3. Built-ins beat hand-written code, so use them in real projects.
+4. Sorting can find duplicates without hashing, but edge cases (the minute boundary) need testing.
+5. Match the structure to the behaviour: undo = Stack, dispatch line = Queue.
+6. Greedy is fast but not always right; DP is safe.
+7. Benchmark honestly: timings come from one run on one machine.
+
+## Limits
+Test data is generated, not real. Each timing is a single run. Greedy was tested, not proved. No hash-based version was built, so nothing is claimed about hashing vs sorting.
