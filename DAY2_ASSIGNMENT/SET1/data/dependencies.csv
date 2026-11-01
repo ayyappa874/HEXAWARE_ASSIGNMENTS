@@ -1,0 +1,13 @@
+service,depends_on
+api-gateway,auth
+api-gateway,cart
+api-gateway,order
+cart,pricing
+pricing,inventory
+inventory,database
+order,cart
+order,payment
+payment,auth
+auth,database
+notification,order
+database,
