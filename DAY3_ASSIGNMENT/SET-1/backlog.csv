@@ -1,0 +1,13 @@
+Jira ID,Story,Epic,User story,MoSCoW,Story points,Sprint
+OGD-4,Browse Grocery Categories,Browse and Search Products,"As a customer, I want to browse grocery categories, so that I can find products by type.",Must,3,OGD Sprint 1
+OGD-5,Search Grocery Products,Browse and Search Products,"As a customer, I want to search for grocery products, so that I can quickly find the items I need.",Must,5,OGD Sprint 1
+OGD-6,View Product Details,Browse and Search Products,"As a customer, I want to view product details, so that I can make an informed purchase decision.",Should,3,OGD Sprint 1
+OGD-7,View Product Availability,Browse and Search Products,"As a customer, I want to check product availability, so that I know whether an item can be ordered before adding it to my cart.",Must,2,OGD Sprint 1
+OGD-8,Add Products to Cart,Cart and Checkout,"As a customer, I want to add grocery products to my shopping cart, so that I can purchase multiple items together.",Must,5,OGD Sprint 2
+OGD-9,Update Cart Quantity,Cart and Checkout,"As a customer, I want to increase or decrease product quantities in my cart, so that I can adjust my order.",Should,2,OGD Sprint 2
+OGD-10,View Cart Total,Cart and Checkout,"As a customer, I want to view the total price of my cart, so that I know the amount payable before checkout.",Must,3,OGD Sprint 2
+OGD-11,Complete Checkout,Cart and Checkout,"As a customer, I want to enter my delivery details and review my order, so that I can confirm the purchase.",Must,8,OGD Sprint 2
+OGD-12,Place Grocery Order,Order and Delivery Tracking,"As a customer, I want to place my grocery order, so that the supermarket can process and deliver it.",Must,5,OGD Sprint 3
+OGD-13,Make Secure Payment,Order and Delivery Tracking,"As a customer, I want to pay securely for my grocery order, so that my payment information and transaction are protected.",Must,8,OGD Sprint 3
+OGD-14,View Order History,Order and Delivery Tracking,"As a customer, I want to view my previous orders, so that I can review past purchases.",Could,3,OGD Sprint 3
+OGD-15,Track Order Delivery,Order and Delivery Tracking,"As a customer, I want to track my order delivery status, so that I know the progress of my order.",Should,5,OGD Sprint 3
